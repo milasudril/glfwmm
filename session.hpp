@@ -58,7 +58,7 @@ namespace GLFWmm
 			int glVersionMaxMinor() const noexcept
 				{return  m_gl_ver_max_minor;}
 
-			const char* versionGet() const noexcept
+			static const char* versionGet() const noexcept
 				{return glfwGetVersionString();}
 
 			Session& swapInterval(int time) noexcept
