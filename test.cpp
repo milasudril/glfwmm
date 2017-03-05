@@ -107,6 +107,9 @@ int main()
 	{
 	GLFWmm::Session session;
 	session.creationHints(Hints{});
+	printf("Latest OpenGL availible is %d.%d\n"
+		,session.glVersionMaxMajor()
+		,session.glVersionMaxMinor());
 	MyCallback cb;
 	GLFWmm::Window<MyCallback> test(0.5f,0.5f,"Hello, World",cb,session);
 	test.contextCapture();
